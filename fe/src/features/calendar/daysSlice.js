@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchDays = createAsyncThunk("rooms/fetchRooms/", async (categoryId) => {
+export const fetchDays = createAsyncThunk("days/fetchDays/", async () => {
   const response = await axios.get(
-    "https://my-json-server.typicode.com/strawberryCheeseCake2"
+    "http://dev.uksfirstdomain.shop/events-list?year=2022&month=12"
   );
-  //console.log("fetched");
-  return response.data;
+  //console.log(response.data.result);
+  return response.data.result;
 })
 
 const initialState = {

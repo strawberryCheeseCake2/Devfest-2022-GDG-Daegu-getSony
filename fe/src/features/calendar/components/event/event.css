@@ -1,0 +1,26 @@
+.day_events_single-event-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  align-items: center;
+}
+
+.day_events_single-event_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #ED7233;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.day_events_single-event_icon_ch {
+  color: white;
+}
+
+.day_events_single-event_name {
+  width: 7rem;
+  /* text-overflow: ellipsis; */
+}
