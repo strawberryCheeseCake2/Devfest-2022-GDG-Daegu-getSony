@@ -1,0 +1,49 @@
+.evtInfo {
+  display: flex;
+  height: 200px;
+  background-color: white;
+  padding: 25px 0px 50px 0px;
+}
+
+.rcBox {
+  background-color: white;
+  border: 1px solid rgb(8, 8, 8);
+  border-radius: 5%;
+  width: 300px;
+  height: 200px;
+  text-align: left;
+  line-height: 30px;
+  margin-right: 30px;
+  padding: 10px 0px 0px 30px;
+}
+
+.rcBoxList {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: lightgray; */
+}
+
+.rcEvtCatego {
+  font-size: x-large;
+}
+
+.chatBar {
+  right: 0;
+  position: fixed;
+  background-color: white;
+  width: 20%;
+  height: 100%;
+}
+
+.leftSide {
+  width: 80%;
+}
+
+.rcEvtCategory {
+  color: blue;
+}
+
+button {
+  border: 1px solid gray;
+  color: black;
+}

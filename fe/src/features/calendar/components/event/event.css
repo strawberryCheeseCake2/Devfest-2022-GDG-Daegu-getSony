@@ -22,5 +22,6 @@
 
 .day_events_single-event_name {
   width: 7rem;
+  color: black;
   /* text-overflow: ellipsis; */
 }

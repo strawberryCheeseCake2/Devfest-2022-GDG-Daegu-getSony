@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <CalendarScreen />,
   },
   {
-    path: "/event/",
+    path: "/event/:id",
     element: <EventScreen />
   }
 ]);
