@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+import CalendarScreen from './features/calendar/screens/CalendarScreen';
+import EventScreen from './features/event/screens/EventScreen';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <CalendarScreen />,
+  },
+  {
+    path: "/event/",
+    element: <EventScreen />
+  }
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='outer-container'>
+      <RouterProvider router={router} />
     </div>
   );
 }

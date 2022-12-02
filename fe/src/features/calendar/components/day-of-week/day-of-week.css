@@ -1,0 +1,13 @@
+.dow-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.dow-day {
+  padding: 0.5rem;
+  background-color: #C0C0C0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid white;
+}

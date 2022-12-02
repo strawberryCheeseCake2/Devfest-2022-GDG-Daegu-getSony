@@ -1,0 +1,26 @@
+.calendar-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+  height: 6rem;
+  width: 100%;
+}
+
+.calendar-header-content-container {
+
+}
+
+.yy-mm {
+  color: #ED7233;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.month-btn {
+  color: #999999;
+  font-size: 3rem;
+  font-weight: bold;
+}
