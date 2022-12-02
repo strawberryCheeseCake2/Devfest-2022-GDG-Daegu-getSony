@@ -4,14 +4,17 @@ import Event from '../event/Event'
 
 import "./calendar-day.css";
 
-const CalendarDay = () => {
+const CalendarDay = ({day}) => {
+  const {month, date, events} = day;
+  
+  //console.log(month);
   return (
     <div className='single-day-container'>
       <div className='day-title-container'>
-        1
+        {date}
       </div>
       <div className='events-container'>
-        {[...Array(5)].map((event) => <Event />)}
+        {events.map((event) => <Event event={event}/>)}
       </div>
     </div>
   )
