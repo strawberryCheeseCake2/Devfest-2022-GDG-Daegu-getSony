@@ -66,7 +66,8 @@ const EventScreen = () => {
             <p>{period}</p>
             <p></p>
             <p></p>
-            <button>신청하기</button>
+            <a href={link}>
+            <button>신청하기</button></a>
             <button>일정 공유</button>
             <p>지원자 수 123
               {applicantCount}
