@@ -76,8 +76,8 @@ const EventScreen = () => {
           </div>
         </div>
         <img 
-        // src={contentImageUrl}
-        src={"http://dev.uksfirstdomain.shop/content/1.png"}
+        src={contentImageUrl}
+        // src={"http://dev.uksfirstdomain.shop/content/1.png"}
          style={{ width: "100%" }} />
         <div style={{ backgroundColor: "#E2E2E2" }}>
           <h2>이런 이벤트는 어떠세요?</h2>
