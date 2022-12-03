@@ -5,7 +5,7 @@ import Event from '../event/Event'
 import "./calendar-day.css";
 
 const CalendarDay = ({day}) => {
-  const {month, date, events} = day;
+  const {date, events} = day;
   
   //console.log(month);
   return (

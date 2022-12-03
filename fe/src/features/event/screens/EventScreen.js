@@ -55,7 +55,6 @@ const EventScreen = () => {
         <div className="evtInfo">
           <img
             src={eventLogo}
-            // src={"https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-1/64362649_1331037713725376_8201671528421523456_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&ccb=1-7&_nc_sid=1eb0c7&_nc_ohc=yk4llqviV8wAX-jQBdv&_nc_ht=scontent-ssn1-1.xx&oh=00_AfCpvywMCezsMhHGwX-W-1hNqRPGtS03WTkTX2MD1xmyjQ&oe=63B1D63F"}
             alt="이벤트 로고"
             style={{ width: "200px", height: "200px", border: "1px black" }}
           />

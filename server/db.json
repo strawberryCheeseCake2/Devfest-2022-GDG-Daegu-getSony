@@ -1,0 +1,48 @@
+{
+  "events-list" : [
+   {
+    "date": 1,
+    "events": [
+      {
+       "eventId": 1,
+       "date": 1,
+       "eventName": "해커톤 1",
+       "status": "끝"
+      },
+      {
+       "eventId": 2,
+       "date": 1,
+       "eventName": "해커톤 2",
+       "status": "시"
+      }
+     ]
+   },
+   
+   {
+    "date": 5,
+    "events": [
+      {
+       "eventId": 3,
+       "date": 5,
+       "eventName": "해커톤 3",
+       "status": "끝"
+      },
+      {
+       "eventId": 4,
+       "date": 5,
+       "eventName": "해커톤 4",
+       "status": "시"
+      },
+     {
+       "eventId": 5,
+       "date": 5,
+       "eventName": "해커톤 5",
+       "status": "시"
+     }
+     ]
+   }
+   
+   
+   
+  ]
+ }
