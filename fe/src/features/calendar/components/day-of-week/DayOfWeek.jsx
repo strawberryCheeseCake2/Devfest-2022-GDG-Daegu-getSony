@@ -9,8 +9,8 @@ const dayOfWeek = [
 const DayOfWeek = () => {
   return (
     <div className='dow-container'>
-      {dayOfWeek.map((dow) => (
-        <div className='dow-day'>
+      {dayOfWeek.map((dow, index) => (
+        <div key={index} className='dow-day'>
           {dow}
         </div>
       ))}

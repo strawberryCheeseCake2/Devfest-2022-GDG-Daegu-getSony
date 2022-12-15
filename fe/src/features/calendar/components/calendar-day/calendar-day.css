@@ -15,4 +15,7 @@
 .events-container {
   padding: 1rem;
   border-right: 1px solid #ECECEC;
+  border-top: 1px solid #ECECEC;
+  border-bottom: 1px solid #ECECEC;
+  flex: 1;
 }

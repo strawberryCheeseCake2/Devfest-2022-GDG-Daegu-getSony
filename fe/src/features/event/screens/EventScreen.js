@@ -22,7 +22,7 @@ const EventScreen = () => {
     // fetchData란 비동기함수 생성
     const fetchRes = async () => {
       const result = await axios.get(
-        `http://dev.uksfirstdomain.shop/events/${id}`
+        `http://localhost:4000/events/${id}`
       );
       setRes(result.data.result.result[0]);
     };

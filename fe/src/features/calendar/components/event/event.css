@@ -12,8 +12,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 10px;
   margin-right: 0.5rem;
+  padding: 0.3rem;
 }
 
 .day_events_single-event_icon_ch {
@@ -21,7 +22,11 @@
 }
 
 .day_events_single-event_name {
-  width: 7rem;
   color: black;
-  /* text-overflow: ellipsis; */
+}
+
+@media screen and (max-width: 1900px) {
+  .day_events_single-event_name {
+    width: 6.5rem;
+  }
 }
