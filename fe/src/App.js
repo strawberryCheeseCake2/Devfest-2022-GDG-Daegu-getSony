@@ -1,11 +1,8 @@
-import './App.css';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import CalendarScreen from './features/calendar/screens/CalendarScreen';
-import EventScreen from './features/event/screens/EventScreen';
+import CalendarScreen from "./features/calendar/screens/CalendarScreen";
+import EventScreen from "./features/event/screens/EventScreen";
 
 const router = createBrowserRouter([
   {
@@ -14,13 +11,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/event/:id",
-    element: <EventScreen />
-  }
+    element: <EventScreen />,
+  },
 ]);
 
 function App() {
   return (
-    <div className='outer-container'>
+    <div className="outer-container">
       <RouterProvider router={router} />
     </div>
   );

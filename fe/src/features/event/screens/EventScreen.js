@@ -1,105 +1,65 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import axios from 'axios';
+import axios from "axios";
+
+import EventInfoSection from "../components/event-info-section/EventInfoSection";
+import EventContentSection from "../components/event-content-section/EventContentSection";
+import EventRecommendSection from "../components/event-recommend-section/EventRecommendSection";
+import EventScreenHeader from "../components/event-screen-header/EventScreenHeader";
 
 import "./event-screen.css";
 
 const EventScreen = () => {
   let { id } = useParams();
-  id = id - '0';
-  
-  const [res, setRes] = useState({});
+  const [param, setParam] = useState(id - "0");
 
-  // useEffect(async () => {
-  //   const result = await axios.get(
-  //     `http://dev.uksfirstdomain.shop/events/${id}`
-  //   );
-  //   setRes(result.data);
-  //   console.log(result)
-  // }, []);
+  const [eventDetail, setEventDetail] = useState({});
+  const [recommededEvents, setRecommendedEvents] = useState([]);
+
   useEffect(() => {
-    // fetchData란 비동기함수 생성
-    const fetchRes = async () => {
-      const result = await axios.get(
-        `http://localhost:4000/events/${id}`
+    const fetchEventDetail = async () => {
+      const fetchedEventDetail = await axios.get(
+        `http://localhost:4000/events/${param}`
       );
-      setRes(result.data.result.result[0]);
+      setEventDetail(fetchedEventDetail.data.result.result);
     };
-    // 실행함으로써 데이타를 fetching합니다.
-    fetchRes();
-    console.log(res)
-  }, []);
-  console.log(res)
-  //let res;
-  // useEffect(() => {
-  //    const response = axios.get(
-  //     `http://dev.uksfirstdomain.shop/events/${id}/`);
-   
-  //     console.log(response.data);
-  //     setRes(response.data.result.result[0])
-      
-  //     //console.log(res)
-  
-  // }, [])
-  
-  // console.log(res)
-  const {eventName, eventLogo, period, Dday,
-     contentImageUrl, applicantCount, link, viewCount} = res;
-  // const {eventName} = res;
-  // console.log(res)
+    fetchEventDetail();
+  }, [param]);
+
+  useEffect(() => {
+    const fetchRecommendedEvents = async () => {
+      const fetchedRecommendedEvents = await axios.get(
+        `http://localhost:4000/recommend/events/${param}`
+      );
+      setRecommendedEvents(fetchedRecommendedEvents.data.result);
+    };
+    fetchRecommendedEvents();
+  }, [param]);
+
+  const {
+    eventName,
+    eventLogo,
+    period,
+    contentImageUrl,
+    applicantCount,
+    link,
+    viewCount,
+  } = eventDetail;
+
   return (
     <div>
-      <div className="chatBar"></div>
-      <div className="leftSide">
-        <div className="evtInfo">
-          <img
-            src={eventLogo}
-            alt="이벤트 로고"
-            style={{ width: "200px", height: "200px", border: "1px black" }}
-          />
-          <div>
-            <h1>{eventName}</h1>
-            {/* <h1>Event Name</h1> */}
-            
-            <p>{period}</p>
-            <p></p>
-            <p></p>
-            <a href={link}>
-            <button>신청하기</button></a>
-            <button>일정 공유</button>
-            <p>지원자 수 123
-              {applicantCount}
-             즐겨찾기 123 공고조회수 123
-             {viewCount}
-             </p>
-          </div>
-        </div>
-        <img 
-        src={contentImageUrl}
-        // src={"http://dev.uksfirstdomain.shop/content/1.png"}
-         style={{ width: "100%" }} />
-        <div style={{ backgroundColor: "#E2E2E2" }}>
-          <h2>이런 이벤트는 어떠세요?</h2>
-          <div className="rcBoxList">
-            <div className="rcBox">
-              <p className="rcEvtCategory">해커톤</p>
-              <p className="rcEvtCatego">GDG Daegu Festa</p>
-              <p id="applicant1">지원자 수 app1</p>
-            </div>
-            <div className="rcBox">
-              <p className="rcEvtCategory">학회</p>
-              <p className="rcEvtCatego">GDG Daegu Festa</p>
-              <p id="applicant2">지원자 수 app2</p>
-            </div>
-            <div className="rcBox">
-              <p className="rcEvtCategory">공모전</p>
-              <p className="rcEvtCatego">GDG Daegu Festa</p>
-              <p id="applicant3">지원자 수 app3</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <EventScreenHeader />
+      <EventInfoSection
+        eventName={eventName}
+        eventLogo={eventLogo}
+        period={period}
+        applicantCount={applicantCount}
+        viewCount={viewCount}
+        link={link}
+      />
+      <EventContentSection contentImageUrl={contentImageUrl} />
+      <EventRecommendSection events={recommededEvents} setParam={setParam} />
     </div>
   );
 };

@@ -1,0 +1,8 @@
+.event-content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.event-content__image {
+  width: 67vw;
+}

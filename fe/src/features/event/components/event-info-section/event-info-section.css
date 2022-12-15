@@ -1,0 +1,73 @@
+.event-info__outer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 1rem 5rem 3rem 5rem;
+  height: 20rem;
+}
+
+.event-info__inner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 17rem;
+  background-color: white;
+  padding: 2rem 3rem 2rem 3rem;
+  flex: 1;
+  border-radius: 2rem;
+}
+
+.event-info__event-name {
+  font-size: 2.5rem;
+}
+
+.event-info__logo {
+  border-radius: 2rem;
+  margin-right: 3rem;
+  width: 200px;
+  height: 200px;
+}
+
+.event-info__btn--apply {
+  background-color: #ed7233;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  height: 3.5rem;
+  width: 8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 1.2rem;
+  padding-bottom: 4px;
+}
+
+.event-info__btn--share {
+  background-color: #c0c0c0;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  height: 3.5rem;
+  width: 8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.event-info__stat {
+  color: #999999;
+  font-size: 1.3rem;
+}
+
+.event-info__stat span {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.event-info__period {
+  color: #777777;
+  font-size: 1.3rem;
+}

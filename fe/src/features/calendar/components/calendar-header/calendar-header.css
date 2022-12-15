@@ -2,17 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   height: 6rem;
   width: 100%;
 }
 
 .calendar-header-content-container {
-
 }
 
 .yy-mm {
-  color: #ED7233;
+  color: #ed7233;
   font-size: 3rem;
   font-weight: bold;
   margin-left: 2rem;

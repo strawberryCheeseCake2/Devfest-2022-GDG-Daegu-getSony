@@ -1,0 +1,10 @@
+.event-screen-header-container {
+  background-color: #f0f0f0;
+  height: 3rem;
+  width: 100%;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  position: sticky;
+  top: 0px;
+}

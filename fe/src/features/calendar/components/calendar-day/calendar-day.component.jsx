@@ -18,14 +18,14 @@ const CalendarDay = ({ day }) => {
     const dayEvents = calEvents.find(
       (event) => event.month == month && event.date == date
     );
-    console.log(dayEvents)
+    console.log(dayEvents);
     if (dayEvents !== undefined) {
-      eventContent = dayEvents.events.map((event, index) => <Event key={index} event={event} />);
+      eventContent = dayEvents.events.map((event, index) => (
+        <Event key={index} event={event} />
+      ));
     } else {
       eventContent = undefined;
     }
-    
-    
   }
 
   return (

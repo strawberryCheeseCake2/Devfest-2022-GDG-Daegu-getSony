@@ -5,17 +5,17 @@
 }
 
 .day-title-container {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   display: flex;
   justify-content: center;
   padding: 0.5rem;
-  border-right: 1px solid #ECECEC;
+  border-right: 1px solid #ececec;
 }
 
 .events-container {
   padding: 1rem;
-  border-right: 1px solid #ECECEC;
-  border-top: 1px solid #ECECEC;
-  border-bottom: 1px solid #ECECEC;
+  border-right: 1px solid #ececec;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
   flex: 1;
 }
