@@ -21,8 +21,7 @@ const EventScreen = () => {
     const fetchEventDetail = async () => {
       const fetchedEventDetail = await axios.get(
         `http://localhost:4000/events/${param}`
-      );
-      setEventDetail(fetchedEventDetail.data.result.result);
+      ).then(res => setEventDetail(res.data.result.result));
     };
     fetchEventDetail();
   }, [param]);
